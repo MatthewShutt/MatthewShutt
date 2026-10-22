@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A touchscreen ESP32 that shows the current Spotify song, built by following an existing tutorial.">
+<title>Spotify Display | Matthew Shutt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">M. Shutt<span> / Portfolio</span></a>
+<nav class="nav" aria-label="Main">
+<a href="index.html">Home</a><a href="projects.html" aria-current="page">Projects</a><a href="resume.html">Resume</a><a href="https://www.linkedin.com/in/matthew-shutt-2bb694420" target="_blank" rel="noopener">LinkedIn</a>
+<button class="theme-btn" id="theme-btn" type="button">Blueprint mode</button>
+</nav></div></header>
+<main>
+<div class="band"><div class="wrap"><div class="band-deco" aria-hidden="true"><svg viewBox="0 0 214 92" width="214" height="92"><g transform="translate(0,0)"><g stroke="#5BC8D9" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 12 H24 M0 28 H24 M58 20 H100"/><path d="M24 6 H44 A14 14 0 0 1 44 34 H24 Z"/></g></g><g transform="translate(114,0)"><g stroke="#DCE9F2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H24 M64 20 H90"/><path d="M24 6 L56 20 L24 34 Z"/><circle cx="60" cy="20" r="4"/></g></g><g transform="translate(0,52)"><g stroke="#DCE9F2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 12 H27 M0 28 H27 M56 20 H100"/><path d="M22 6 Q42 6 56 20 Q42 34 22 34 Q32 20 22 6 Z"/></g></g><g transform="translate(114,52)"><g stroke="#5BC8D9" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 12 H24 M0 28 H24 M66 20 H100"/><path d="M24 6 H44 A14 14 0 0 1 44 34 H24 Z"/><circle cx="62" cy="20" r="4"/></g></g></svg></div>
+<div class="crumb"><a href="projects.html">&larr; All projects</a></div>
+<div class="eyebrow">ESP32 &middot; Touchscreen &middot; Tutorial build</div>
+<h1>Spotify Now Playing Display</h1>
+<p class="lede">A small touchscreen that shows the song playing on Spotify and lets me skip, pause and browse playlists.</p>
+</div></div>
+<section><div class="wrap"><div class="notice"><div class="eyebrow">Please read first</div>
+<h3>This project follows a tutorial</h3>
+<p>I did not design the software or come up with this project. I built it by following the original author's guide, step by step. I include it here because it was real hands-on practice with ESP32 hardware, and I would rather be clear about where it came from.</p>
+<p>I could not track down the original author, so I can't credit them by name. The idea and the software are theirs.</p></div></div></section>
+<div class="wrap rule-wrap"><div class="rule" aria-hidden="true"><i style="flex:3"></i><svg viewBox="0 0 90 40" width="90" height="40"><g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H18 L24 8 L34 32 L44 8 L54 32 L64 8 L70 20 H90"/></g></svg><i style="flex:1"></i></div></div>
+<section><div class="wrap"><div class="sec-head"><span class="sheet">SHEET 1</span><h2>What it does</h2></div><div class="two-col"><div class="stack"><ul>
+<li>Shows the current song with album art on a 2.8 inch color touchscreen</li>
+<li>Changes the background color to match the album art</li>
+<li>Touch controls for play, pause and skip</li>
+<li>Playlist browser on the screen</li></ul></div>
+<figure><div class="print tall"><img src="assets/img/spotify-case.webp" alt="ESP32 touchscreen board in a gray 3D printed case" width="900" height="1295"></div><figcaption><b>FIG. 1</b> The display board in the case I printed. The screen is off in this photo.</figcaption></figure></div></div></section>
+<div class="wrap rule-wrap"><div class="rule" aria-hidden="true"><i style="flex:1"></i><svg viewBox="0 0 100 40" width="100" height="40"><g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 12 H27 M0 28 H27 M56 20 H100"/><path d="M22 6 Q42 6 56 20 Q42 34 22 34 Q32 20 22 6 Z"/></g></svg><i style="flex:1"></i></div></div>
+<section><div class="wrap"><div class="sec-head"><span class="sheet">SHEET 2</span><h2>Hardware and setup</h2></div><div class="two-col"><div class="scroll"><table class="spec"><tbody>
+<tr><td>Board</td><td>ESP32-2432S028R, the "Cheap Yellow Display" (CYD), with built-in screen and touch</td></tr>
+<tr><td>Software</td><td>Arduino IDE, TFT_eSPI display library</td></tr>
+<tr><td>Spotify</td><td>A Spotify developer app and a refresh token for access to my account</td></tr>
+<tr><td>WiFi</td><td>WiFiManager, so the display can join a network without editing code</td></tr>
+<tr><td>Touch</td><td>Touch calibration run on the screen</td></tr>
+<tr><td>Case</td><td>Designed in Onshape and 3D printed</td></tr></tbody></table></div>
+<div class="stack"><h3>What I did myself</h3><p>I designed and printed the case that holds the board. I also set up the Arduino IDE for the board, configured the display library for this screen, registered the Spotify developer app and completed the refresh token steps, connected the display to WiFi, and calibrated the touch panel. The code and the idea belong to the tutorial author.</p></div></div></div></section>
+<div class="wrap rule-wrap"><div class="rule" aria-hidden="true"><i style="flex:2"></i><svg viewBox="0 0 60 40" width="60" height="40"><g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H26 M34 20 H60 M26 6 V34 M34 6 V34"/></g></svg><i style="flex:1"></i></div></div>
+<section><div class="wrap"><div class="sec-head"><span class="sheet">SHEET 3</span><h2>The case</h2></div><div class="two-col"><div class="stack"><p>The case is an open tray with small corner blocks that hold the board and a cutout at one end. I modeled it in Onshape and printed it. It was a small design, and it was a good way to practice getting a part to fit real hardware.</p></div>
+<figure><div class="print"><img src="assets/img/spotify-cad.webp" alt="Onshape model of the open tray case with corner blocks and an end cutout" width="694" height="372"></div><figcaption><b>FIG. 2</b> The case in Onshape.</figcaption></figure></div></div></section>
+<div class="wrap rule-wrap"><div class="rule" aria-hidden="true"><i style="flex:1"></i><svg viewBox="0 0 90 40" width="90" height="40"><g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H24 M64 20 H90"/><path d="M24 6 L56 20 L24 34 Z"/><circle cx="60" cy="20" r="4"/></g></svg><i style="flex:2"></i></div></div>
+<section><div class="wrap"><div class="sec-head"><span class="sheet">SHEET 4</span><h2>What it taught me</h2></div><div class="grid-3"><div class="panel stack"><h3>Display setup</h3><p>Small screens need their pin and driver settings to match the exact board. A wrong setting gives a blank or garbled screen.</p></div>
+<div class="panel stack"><h3>Web access with tokens</h3><p>Spotify does not hand out a permanent password. The board uses a refresh token to ask for short-term access.</p></div>
+<div class="panel stack"><h3>Following a guide closely</h3><p>Matching versions of boards, libraries and settings to the guide mattered more than I expected.</p></div></div></div></section>
+<div class="wrap next"><a class="btn dark" href="liam-f1-turbine.html">&larr; Liam F1 turbine</a><a class="btn dark" href="gyro-light.html">Next: Gyro task light &rarr;</a></div></main>
+<footer><div class="wrap"><span>Matthew Shutt &middot; Mechanical Engineering &middot; Mount Vernon Nazarene University</span>
+<span><a href="https://www.linkedin.com/in/matthew-shutt-2bb694420" target="_blank" rel="noopener">LinkedIn</a> &middot; mbshutt3@gmail.com</span></div></footer>
+<script>// Theme toggle: follows the device setting until the visitor picks one.
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-btn');
+  function saved() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
+  function save(v) { try { localStorage.setItem('theme', v); } catch (e) {} }
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function label() { if (btn) btn.textContent = isDark() ? 'Light mode' : 'Blueprint mode'; }
+  var s = saved();
+  if (s === 'dark' || s === 'light') root.setAttribute('data-theme', s);
+  label();
+  if (btn) btn.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    save(next);
+    label();
+  });
+})();
+</script>
+</body>
+</html>

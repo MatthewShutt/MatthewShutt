@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Completed, planned and in-progress engineering projects by Matthew Shutt.">
+<title>Projects | Matthew Shutt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">M. Shutt<span> / Portfolio</span></a>
+<nav class="nav" aria-label="Main">
+<a href="index.html">Home</a><a href="projects.html" aria-current="page">Projects</a><a href="resume.html">Resume</a><a href="https://www.linkedin.com/in/matthew-shutt-2bb694420" target="_blank" rel="noopener">LinkedIn</a>
+<button class="theme-btn" id="theme-btn" type="button">Blueprint mode</button>
+</nav></div></header>
+<main>
+<div class="band"><div class="wrap"><div class="band-deco" aria-hidden="true"><svg viewBox="0 0 164 92" width="164" height="92"><g transform="translate(0,0)"><g stroke="#5BC8D9" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H18 L24 8 L34 32 L44 8 L54 32 L64 8 L70 20 H90"/></g></g><g transform="translate(104,0)"><g stroke="#DCE9F2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H26 M34 20 H60 M26 6 V34 M34 6 V34"/></g></g><g transform="translate(0,52)"><g stroke="#DCE9F2" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H28 M52 20 H70 M28 6 V34 M36 12 V28 M44 6 V34 M52 12 V28 M44 20 H52"/></g></g><g transform="translate(84,52)"><g stroke="#5BC8D9" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H26 M48 20 H80 M48 8 V32"/><path d="M26 8 V32 L48 20 Z"/></g></g></svg></div><div class="eyebrow">Sheet 3 &middot; Drawing list</div>
+<h1>Projects</h1>
+<p class="lede">Finished work first, then ideas I plan to build, then the prototype I am still fixing.</p></div></div>
+<div class="wrap rule-wrap"><div class="rule" aria-hidden="true"><i style="flex:1"></i><svg viewBox="0 0 100 40" width="100" height="40"><g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 12 H27 M0 28 H27 M56 20 H100"/><path d="M22 6 Q42 6 56 20 Q42 34 22 34 Q32 20 22 6 Z"/></g></svg><i style="flex:1"></i></div></div>
+<section id="completed"><div class="wrap"><div class="sec-head"><span class="sheet">A</span><h2>Completed</h2></div><div class="cards">
+<article class="card"><div class="thumb"><img src="assets/img/liam-front.webp" alt="Front view of the red spiral turbine blade on its black base" width="210" height="177" style="width:210px"></div>
+<div class="body"><div class="tags"><span class="tag done">Completed</span><span class="tag">Inventor</span><span class="tag">3D printing</span></div>
+<h3><a href="liam-f1-turbine.html">Liam F1 Wind Turbine</a></h3>
+<p>Class project with a team of five. We researched, designed, printed, built and tested a Liam F1 turbine under a $100 budget. One-way bearings let us leave out a brake. Includes the final poster.</p>
+<a class="more" href="liam-f1-turbine.html">Read the project &rarr;</a></div></article>
+<article class="card"><div class="thumb"><img src="assets/img/spotify-case.webp" alt="ESP32 touchscreen sitting in a 3D printed gray case" width="900" height="1295" style="max-height:240px"></div>
+<div class="body"><div class="tags"><span class="tag done">Completed</span><span class="tag">ESP32</span><span class="tag">Followed a tutorial</span></div>
+<h3><a href="spotify-display.html">Spotify Now Playing Display</a></h3>
+<p>A touchscreen display that shows album art and the current song, with touch controls. The software follows an existing tutorial, and the page says so up front. I designed and printed the case myself.</p>
+<a class="more" href="spotify-display.html">Read the project &rarr;</a></div></article>
+</div></div></section>
+<div class="wrap rule-wrap"><div class="rule" aria-hidden="true"><i style="flex:2"></i><svg viewBox="0 0 60 40" width="60" height="40"><g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H26 M34 20 H60 M26 6 V34 M34 6 V34"/></g></svg><i style="flex:1"></i></div></div>
+<section id="planned"><div class="wrap"><div class="sec-head"><span class="sheet">B</span><h2>Planned</h2></div><article class="card plain"><div class="body"><div class="tags"><span class="tag plan">Planned</span><span class="tag">ESP32</span><span class="tag">Wireless</span></div>
+<h3>Restaurant Section Notification System</h3>
+<p>Two ESP32 boards. A transmitter has six buttons, one for each section of a restaurant floor. A receiver has six timer lights. Pressing a section button starts the matching light. I plan to start with WiFi and MQTT messaging, and fall back to LoRa or nRF24L01+ radios if the range is too long for WiFi.</p></div></article>
+<div class="slots" aria-label="Reserved for future projects"><div class="slot"><div><b>+</b>Next project</div></div><div class="slot"><div><b>+</b>Next project</div></div><div class="slot"><div><b>+</b>Next project</div></div></div></div></section>
+<div class="wrap rule-wrap"><div class="rule" aria-hidden="true"><i style="flex:1"></i><svg viewBox="0 0 90 40" width="90" height="40"><g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 20 H24 M64 20 H90"/><path d="M24 6 L56 20 L24 34 Z"/><circle cx="60" cy="20" r="4"/></g></svg><i style="flex:2"></i></div></div>
+<section id="in-progress"><div class="wrap"><div class="sec-head"><span class="sheet">C</span><h2>In progress</h2></div><article class="card"><div class="thumb dark"><img src="assets/img/gyro-schematic.svg" alt="Block diagram: wearable controller, wireless link, and a base with pan and tilt servos" width="760" height="350" style="max-height:none;width:100%"></div>
+<div class="body"><div class="tags"><span class="tag wip">Prototype, in progress</span><span class="tag">ESP32</span><span class="tag">Onshape</span></div>
+<h3><a href="gyro-light.html">Gyro-Controlled Task Light</a></h3>
+<p>A wearable controller reads hand tilt and sends it over ESP-NOW to a motorized pan and tilt base. The wireless link and controls work. The first printed base is rough, and the pan servo stalls under the weight of the tilt assembly. I wrote the problems up instead of hiding them. AI was used on this one, and the page explains how.</p>
+<a class="more" href="gyro-light.html">Read the project &rarr;</a></div></article></div></section>
+</main>
+<footer><div class="wrap"><span>Matthew Shutt &middot; Mechanical Engineering &middot; Mount Vernon Nazarene University</span>
+<span><a href="https://www.linkedin.com/in/matthew-shutt-2bb694420" target="_blank" rel="noopener">LinkedIn</a> &middot; mbshutt3@gmail.com</span></div></footer>
+<script>// Theme toggle: follows the device setting until the visitor picks one.
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-btn');
+  function saved() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
+  function save(v) { try { localStorage.setItem('theme', v); } catch (e) {} }
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function label() { if (btn) btn.textContent = isDark() ? 'Light mode' : 'Blueprint mode'; }
+  var s = saved();
+  if (s === 'dark' || s === 'light') root.setAttribute('data-theme', s);
+  label();
+  if (btn) btn.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    save(next);
+    label();
+  });
+})();
+</script>
+</body>
+</html>
